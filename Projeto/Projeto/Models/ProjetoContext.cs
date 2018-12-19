@@ -20,5 +20,7 @@ namespace Projeto.Models
         }
 
         public System.Data.Entity.DbSet<Projeto.Models.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<Projeto.Models.Order> Orders { get; set; }
     }
 }
