@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Description;
 using System.Web.Http.ModelBinding;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -21,6 +22,7 @@ namespace Projeto.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
@@ -342,6 +344,7 @@ namespace Projeto.Controllers
 
                 if (!addRoleToResult.Succeeded)
                 {
+                    Console.WriteLine("teste");
                     return GetErrorResult(result);
                 }
             }
