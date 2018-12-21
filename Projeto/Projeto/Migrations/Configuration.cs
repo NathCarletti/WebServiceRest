@@ -1,5 +1,6 @@
 namespace Projeto.Migrations
 {
+    using Projeto.CRMClient;
     using Projeto.Models;
     using System;
     using System.Data.Entity;
@@ -19,6 +20,8 @@ namespace Projeto.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+          
+
             context.Products.AddOrUpdate(
                 p => p.Id,
                 new Product
@@ -67,6 +70,18 @@ namespace Projeto.Migrations
                 }
             );
 
+           /* context.Customer.AddOrUpdate(
+                    c => c.Id, new Customer
+                    { Id = 1, cpf = "12345678901",
+                name = "CRM	Web	API",
+                address = "Rua	1,	100",
+                city = "São	Paulo",
+                state = "São	Paulo",
+                country = "Brasil",
+                zip = "12345000",
+                email = "matilde@siecolasystems.com",
+                mobile = "+551112345678", });
+                */
         }
     }
 }
