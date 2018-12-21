@@ -216,7 +216,7 @@ namespace Projeto.Controllers
             }
             else
             {
-                return BadRequest("Acesso não autorizado.");
+                return BadRequest("Usuário não autorizado.");
             }
         }
     
